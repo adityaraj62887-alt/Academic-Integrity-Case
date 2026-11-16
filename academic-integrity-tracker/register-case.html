@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Incident | Academic Integrity Case Tracker</title>
+  
+  <!-- Shared stylesheet inside css folder -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+
+  <!-- 1. Top Navigation Bar (Matches Dashboard) -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="nav-icon">🏛️</span>
+      <strong>LPU Integrity Cell</strong>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="all-cases.html">All Cases</a>
+      <a href="register-case.html" class="active">+ Register Case</a>
+    </nav>
+
+    <!-- User Profile & Session Controls -->
+    <div class="nav-user">
+      <span class="role-pill">Officer: Dr. R. Sharma</span>
+      <a href="index.html" class="nav-logout">Logout</a>
+    </div>
+  </header>
+
+  <!-- 2. Main Page Layout Container -->
+  <main class="main-container">
+
+    <!-- Page Header & Scope Notice -->
+    <section class="page-header">
+      <div>
+        <h2>Formal Misconduct Incident Intake</h2>
+        <p>Record allegations, associate student records, and reference digital evidence.</p>
+      </div>
+      <div class="access-box">
+        <strong>Intake Desk:</strong> Case Submission
+      </div>
+    </section>
+
+    <!-- Registration Form Card -->
+    <section class="content-card">
+      <div class="card-bar">
+        <div>
+          <h3>Academic Misconduct Incident Form</h3>
+          <p>Please enter verified observations provided by the invigilator or course instructor.</p>
+        </div>
+      </div>
+
+      <!-- Submitting points to all-cases.html simulating entry into the master registry -->
+      <form action="all-cases.html" method="get" class="case-form">
+
+        <!-- Section 1: Docket Reference & Assignment -->
+        <div class="form-section-title">1. Docket Metadata &amp; Assignment (Requirement 1 &amp; 5)</div>
+        <div class="form-row-2">
+          <div class="input-group">
+            <label for="case-id">Assigned Case Reference (Auto-Generated)</label>
+            <input type="text" id="case-id" name="caseId" value="CAS-2026-084" readonly class="readonly-input">
+          </div>
+
+          <div class="input-group">
+            <label for="assigned-officer">Assign Disciplinary Officer (Requirement 5)</label>
+            <select id="assigned-officer" name="officer" required>
+              <option value="Dr. R. Sharma" selected>Dr. R. Sharma (Associate Professor, CSE)</option>
+              <option value="Prof. K. Verma">Prof. K. Verma (Integrity Panel Member)</option>
+              <option value="Dr. A. Singh">Dr. A. Singh (Quality Assurance Cell)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="input-group">
+            <label for="incident-date">Date &amp; Time of Alleged Incident</label>
+            <input type="datetime-local" id="incident-date" name="incidentDate" required>
+          </div>
+
+          <div class="input-group">
+            <label for="reporting-staff">Reporting Faculty / Invigilator</label>
+            <input type="text" id="reporting-staff" name="reporter" placeholder="e.g. Prof. M. K. Nair" required>
+          </div>
+        </div>
+
+        <!-- Section 2: Student & Course Records (Requirement 2) -->
+        <div class="form-section-title">2. Involved Student &amp; Course Details (Requirement 2)</div>
+        <div class="form-row-2">
+          <div class="input-group">
+            <label for="student-name">Student Full Name</label>
+            <input type="text" id="student-name" name="studentName" placeholder="e.g. Aryan Kumar" required>
+          </div>
+
+          <div class="input-group">
+            <label for="student-roll">Registration / Roll Number</label>
+            <input type="text" id="student-roll" name="studentRoll" placeholder="e.g. 12304912" required pattern="[0-9]{8,10}">
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="input-group">
+            <label for="course-name">Course Code &amp; Title</label>
+            <input type="text" id="course-name" name="course" placeholder="e.g. CSE316: Operating Systems" required>
+          </div>
+
+          <div class="input-group">
+            <label for="academic-term">Academic Program &amp; Term</label>
+            <input type="text" id="academic-term" name="term" placeholder="B.Tech CSE - 1st Year (Term 1)" required>
+          </div>
+        </div>
+
+        <!-- Section 3: Misconduct Classification -->
+        <div class="form-section-title">3. Misconduct Classification &amp; Observations</div>
+        <div class="form-row-1">
+          <div class="input-group">
+            <label for="violation-category">Violation Category</label>
+            <select id="violation-category" name="category" required>
+              <option value="">-- Choose Category --</option>
+              <option value="plagiarism">Plagiarism (Code Similarity / Assignment Overlap)</option>
+              <option value="exam-unauthorized">Unauthorized Materials in Examination Hall</option>
+              <option value="proxy">Proxy Submission / Impersonation</option>
+              <option value="collaboration">Unauthorized Peer Collaboration</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-1">
+          <div class="input-group">
+            <label for="incident-details">Invigilator Narrative &amp; Facts Observed</label>
+            <textarea id="incident-details" name="details" rows="4" placeholder="Detail the exact observations, time of seizure, questions affected, or circumstances noted by the invigilator..." required></textarea>
+          </div>
+        </div>
+
+        <!-- Section 4: Evidence Documentation (Requirement 3) -->
+        <div class="form-section-title">4. Evidence References &amp; Repository Links (Requirement 3)</div>
+        <div class="form-row-1">
+          <div class="input-group">
+            <label for="evidence-url">Digital Evidence URL / Shared Repository Reference</label>
+            <input type="url" id="evidence-url" name="evidenceUrl" placeholder="https://drive.google.com/institution/evidence/case_084_report.pdf">
+            <small class="field-hint">Provide verifiable links to similarity reports (Turnitin/MOSS), confiscated paper scans, or terminal code diffs.</small>
+          </div>
+        </div>
+
+        <!-- Submission Buttons -->
+        <div class="form-button-row">
+          <a href="dashboard.html" class="btn-cancel">Cancel</a>
+          <button type="submit" class="btn-primary">Submit Official Case Docket &rarr;</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>

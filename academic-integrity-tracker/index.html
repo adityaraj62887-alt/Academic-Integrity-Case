@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Login - Academic Integrity System</title>
+  
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+
+  <!-- Main container that holds and centers the login card -->
+  <main class="login-box">
+
+    <!-- University title and portal name -->
+    <header class="login-header">
+      <div class="badge-icon">🏛️</div>
+      <h1>Academic Integrity Portal</h1>
+      <p>Disciplinary Committee & Staff Access</p>
+    </header>
+
+    <!-- Requirement 8: Security Notice for Role-Based Access Control -->
+    <section class="role-notice">
+      <p><strong>Notice:</strong> Restricted to authorized university staff, faculty, and integrity panel members.</p>
+    </section>
+
+    <!-- Login form: Directs to dashboard.html on submission -->
+    <form action="dashboard.html" method="get" class="login-form">
+
+      <!-- 1: Staff / Officer ID -->
+      <div class="input-group">
+        <label for="staff-id">Staff / Employee ID</label>
+        <input 
+          type="text" 
+          id="staff-id" 
+          name="staffId" 
+          placeholder="e.g. LPU-OFF-104" 
+          value="LPU-OFF-104" 
+          required
+        >
+      </div>
+
+      <!-- 2: Password -->
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Enter password" 
+          value="Password123" 
+          required
+        >
+      </div>
+
+      <!-- 3: Role Persona Selector (Requirement 8) -->
+      <div class="input-group">
+        <label for="role-select">Select Your Role</label>
+        <select id="role-select" name="userRole" required>
+          <option value="officer" selected>Investigating Officer</option>
+          <option value="committee">Disciplinary Committee Member</option>
+          <option value="admin">System Administrator</option>
+        </select>
+      </div>
+
+      <!-- Submit button to enter the dashboard -->
+      <button type="submit" class="submit-btn">
+        Login to Dashboard &rarr;
+      </button>
+
+    </form>
+
+    <footer class="login-footer">
+      <p>Academic Year 2026–2027 &bull; LPU Case Tracker</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

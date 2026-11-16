@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Case Registry | Academic Integrity Tracker</title>
+  
+  <!-- Shared stylesheet inside css folder -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+
+  <!-- 1. Top Navigation Bar (Shared Site Layout) -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="nav-icon">🏛️</span>
+      <strong>LPU Integrity Cell</strong>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="all-cases.html" class="active">All Cases</a>
+      <a href="register-case.html">+ Register Case</a>
+    </nav>
+
+    <!-- User Profile & Session Controls -->
+    <div class="nav-user">
+      <span class="role-pill">Officer: Dr. R. Sharma</span>
+      <a href="index.html" class="nav-logout">Logout</a>
+    </div>
+  </header>
+
+  <!-- 2. Main Workspace -->
+  <main class="main-container">
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div>
+        <h2>Master Case Docket &amp; Registry</h2>
+        <p>Comprehensive record of all reported academic misconduct investigations.</p>
+      </div>
+      <div class="access-box">
+        <strong>Docket View:</strong> Full Academic Record Access
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="filter-card">
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label for="search-input">Search Docket</label>
+          <input type="text" id="search-input" placeholder="Search by Student ID, Case ID, or Course..." class="filter-control">
+        </div>
+
+        <div class="filter-group">
+          <label for="status-filter">Filter by Status (Req 4)</label>
+          <select id="status-filter" class="filter-control">
+            <option value="all">All Workflow Statuses</option>
+            <option value="review">Under Review</option>
+            <option value="hearing">Hearing Scheduled</option>
+            <option value="resolved">Resolved / Closed</option>
+          </select>
+        </div>
+
+        <div class="filter-actions">
+          <a href="register-case.html" class="btn-primary">+ Register New Case</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Registry Table Card -->
+    <section class="content-card">
+      <div class="card-bar">
+        <div>
+          <h3>Registered Academic Misconduct Records</h3>
+          <p>Showing active and concluded institutional files for current academic session.</p>
+        </div>
+        <small style="color: #64748b; font-weight: 600;">Total Records: 4</small>
+      </div>
+
+      <!-- Complete Case Docket Table -->
+      <table class="simple-table">
+        <thead>
+          <tr>
+            <th>Case ID</th>
+            <th>Student Details</th>
+            <th>Course Involved</th>
+            <th>Assigned Officer (Req 5)</th>
+            <th>Workflow Status (Req 4)</th>
+            <th>Inspection Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Case 1: Primary Demo Record for case-details.html -->
+          <tr>
+            <td><strong>CAS-2026-081</strong></td>
+            <td>
+              Aditya Sharma<br>
+              <small style="color: #64748b;">Roll: 12304912 (CSE)</small>
+            </td>
+            <td>CSE316: Operating Systems</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="status-pill pill-amber">Hearing Scheduled</span></td>
+            <td><a href="case-details.html" class="btn-action">Open File &rarr;</a></td>
+          </tr>
+
+          <!-- Case 2 -->
+          <tr>
+            <td><strong>CAS-2026-080</strong></td>
+            <td>
+              Rohan Patel<br>
+              <small style="color: #64748b;">Roll: 12301988 (CSE)</small>
+            </td>
+            <td>INT219: Web Development</td>
+            <td>Prof. K. Verma</td>
+            <td><span class="status-pill pill-blue">Under Review</span></td>
+            <td><a href="case-details.html" class="btn-action">Open File &rarr;</a></td>
+          </tr>
+
+          <!-- Case 3 -->
+          <tr>
+            <td><strong>CAS-2026-079</strong></td>
+            <td>
+              Simran Kaur<br>
+              <small style="color: #64748b;">Roll: 12306541 (IT)</small>
+            </td>
+            <td>CSE205: Data Structures</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="status-pill pill-green">Resolved (Sanctioned)</span></td>
+            <td><a href="case-details.html" class="btn-action">Open File &rarr;</a></td>
+          </tr>
+
+          <!-- Case 4 -->
+          <tr>
+            <td><strong>CAS-2026-078</strong></td>
+            <td>
+              Aman Kumar<br>
+              <small style="color: #64748b;">Roll: 12309812 (ECE)</small>
+            </td>
+            <td>ECE213: Digital Electronics</td>
+            <td>Dr. A. Singh</td>
+            <td><span class="status-pill pill-green">Resolved (Exonerated)</span></td>
+            <td><a href="case-details.html" class="btn-action">Open File &rarr;</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+  
+</body>
+</html>

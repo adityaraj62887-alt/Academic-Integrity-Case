@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Academic Integrity Case Tracker</title>
+  
+  <!-- Shared stylesheet inside css folder -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+
+  <!-- 1. Top Navigation Bar (Header) -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="nav-icon">🏛️</span>
+      <strong>LPU Integrity Cell</strong>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <nav class="nav-links">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="all-cases.html">All Cases</a>
+      <a href="register-case.html">+ Register Case</a>
+    </nav>
+
+    <!-- User Profile & Session Controls (Requirement 8) -->
+    <div class="nav-user">
+      <span class="role-pill">Officer: Dr. R. Sharma</span>
+      <a href="index.html" class="nav-logout">Logout</a>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+
+    <!-- Page Title & Access Scope Notice -->
+    <section class="page-header">
+      <div>
+        <h2>Academic Integrity Case Management</h2>
+        <p>Institutional record-keeping and follow-up portal for academic misconduct files.</p>
+      </div>
+      <!-- Simulated Access Level Indicator -->
+      <div class="access-box">
+        <strong>Authorized Access:</strong> Investigating Officer Dossier
+      </div>
+    </section>
+
+    <!-- Key Summary Metrics (Only 3 essential cards) -->
+    <section class="kpi-grid">
+      <!-- Card 1: Active Cases -->
+      <div class="kpi-card border-blue">
+        <span class="kpi-label">Active Investigations</span>
+        <span class="kpi-number">14</span>
+        <small>Cases currently under review</small>
+      </div>
+
+      <!-- Card 2: Pending Hearings -->
+      <div class="kpi-card border-amber">
+        <span class="kpi-label">Pending Hearings</span>
+        <span class="kpi-number">3</span>
+        <small>Scheduled with committee this week</small>
+      </div>
+
+      <!-- Card 3: Resolved Cases -->
+      <div class="kpi-card border-green">
+        <span class="kpi-label">Resolved Cases</span>
+        <span class="kpi-number">25</span>
+        <small>Decisions concluded and filed</small>
+      </div>
+    </section>
+
+    <!-- Recent Case Registry Table -->
+    <section class="content-card">
+      
+      <!-- Table Header & Action Button -->
+      <div class="card-bar">
+        <div>
+          <h3>Recent Case Docket</h3>
+          <p>Latest academic integrity reports filed by invigilators.</p>
+        </div>
+        <a href="register-case.html" class="btn-primary">+ Register New Case</a>
+      </div>
+
+      <!-- Table -->
+      <table class="simple-table">
+        <thead>
+          <tr>
+            <th>Case ID</th>
+            <th>Student ID</th>
+            <th>Course Code</th>
+            <th>Assigned Officer</th>
+            <th>Workflow Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CAS-2026-081</strong></td>
+            <td>12304912</td>
+            <td>CSE316 (OS Lab)</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="status-pill pill-amber">Hearing Scheduled</span></td>
+            <td><a href="case-details.html" class="btn-action">Open Case &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><strong>CAS-2026-080</strong></td>
+            <td>12301988</td>
+            <td>INT219 (Web Dev)</td>
+            <td>Prof. K. Verma</td>
+            <td><span class="status-pill pill-blue">Under Review</span></td>
+            <td><a href="case-details.html" class="btn-action">Open Case &rarr;</a></td>
+          </tr>
+          <tr>
+            <td><strong>CAS-2026-079</strong></td>
+            <td>12306541</td>
+            <td>CSE205 (Data Structures)</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="status-pill pill-green">Resolved</span></td>
+            <td><a href="case-details.html" class="btn-action">Open Case &rarr;</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Docket CAS-2026-081 | Academic Integrity Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site-body">
+
+  <!-- Shared Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="nav-icon">🏛️</span>
+      <strong>LPU Integrity Cell</strong>
+    </div>
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="all-cases.html">All Cases</a>
+      <a href="register-case.html">+ Register Case</a>
+    </nav>
+    <div class="nav-user">
+      <span class="role-pill">Officer: Dr. R. Sharma</span>
+      <a href="index.html" class="nav-logout">Logout</a>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- Header Bar -->
+    <div class="docket-top">
+      <div>
+        <h2>Investigation File: CAS-2026-081</h2>
+        <p>Confidential Academic Conduct Docket &bull; Status: <span class="status-pill pill-amber">Hearing Scheduled</span></p>
+      </div>
+      <a href="all-cases.html" class="btn-cancel">&larr; Back to All Cases</a>
+    </div>
+
+    <!-- 1. Case & Student Summary Grid -->
+    <section class="content-card">
+      <h3 class="section-heading">1. Case &amp; Student Information (Req 1, 2 &amp; 5)</h3>
+      
+      <div class="docket-grid">
+        <div class="docket-field">
+          <span class="docket-label">Case Reference</span>
+          <span class="docket-val">CAS-2026-081</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Course Involved</span>
+          <span class="docket-val">CSE316: Operating Systems Lab</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Student Name</span>
+          <span class="docket-val">Aditya Sharma</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Registration / Roll No</span>
+          <span class="docket-val">12304912 (Section K26VW)</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Assigned Officer (Req 5)</span>
+          <span class="docket-val">Dr. R. Sharma (CSE Dept)</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Reporting Invigilator</span>
+          <span class="docket-val">Prof. M. K. Nair</span>
+        </div>
+        <div class="docket-field full-width">
+          <span class="docket-label">Allegation Summary</span>
+          <span class="docket-val">Plagiarism — Automated code similarity analysis identified 88% structural overlap with external repository during CA-2 evaluation.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Workflow Stage Indicator (Simple Horizontal Bar) -->
+    <section class="content-card">
+      <h3 class="section-heading">2. Workflow Stage (Req 4)</h3>
+      <div class="status-pipeline">
+        <div class="pipe-step done">✓ 1. Incident Reported</div>
+        <div class="pipe-arrow">&rarr;</div>
+        <div class="pipe-step done">✓ 2. Officer Assigned</div>
+        <div class="pipe-arrow">&rarr;</div>
+        <div class="pipe-step current">● 3. Panel Hearing</div>
+        <div class="pipe-arrow">&rarr;</div>
+        <div class="pipe-step pending">4. Sanction Decision</div>
+        <div class="pipe-arrow">&rarr;</div>
+        <div class="pipe-step pending">5. Closed</div>
+      </div>
+    </section>
+
+    <!-- 3. Evidence Documentation -->
+    <section class="content-card">
+      <h3 class="section-heading">3. Referenced Evidence Documents (Req 3)</h3>
+      <table class="simple-table">
+        <thead>
+          <tr>
+            <th>Evidence ID</th>
+            <th>Document Title</th>
+            <th>Details</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>EV-01</strong></td>
+            <td>MOSS Code Report</td>
+            <td>88% AST overlap detected in threading routine</td>
+            <td><a href="#" class="btn-action">View Report &nearr;</a></td>
+          </tr>
+          <tr>
+            <td><strong>EV-02</strong></td>
+            <td>Source Code Diff File</td>
+            <td>Matched variable names and memory allocation structure</td>
+            <td><a href="#" class="btn-action">Inspect Diff &nearr;</a></td>
+          </tr>
+          <tr>
+            <td><strong>EV-03</strong></td>
+            <td>Invigilator Incident Form</td>
+            <td>Signed incident memo from lab session supervisor</td>
+            <td><a href="#" class="btn-action">Read Memo &nearr;</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 4. Hearing Minutes & Sanctions -->
+    <section class="content-card">
+      <h3 class="section-heading">4. Hearing Minutes &amp; Sanctions Imposed (Req 6 &amp; 7)</h3>
+      <div class="hearing-summary">
+        <div class="docket-field">
+          <span class="docket-label">Committee Meeting</span>
+          <span class="docket-val">Convened on 14 Oct 2026 &bull; Panelists: Dr. R. Sharma, Prof. K. Verma</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Student Statement</span>
+          <span class="docket-val">Student acknowledged consulting uncredited code snippets for synchronization logic without formal citation.</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Official Finding</span>
+          <span class="docket-val">Category B Misconduct (Unapproved Code Reuse).</span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Sanction Imposed</span>
+          <span class="docket-val"><strong>Awarded zero ('0') marks on CA-2 evaluation; mandatory 1-week Academic Integrity Workshop.</strong></span>
+        </div>
+        <div class="docket-field">
+          <span class="docket-label">Appellate Window</span>
+          <span class="docket-val">Student may appeal decision to Appellate Tribunal within 7 calendar days.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Case History Audit Trail -->
+    <section class="content-card">
+      <h3 class="section-heading">5. Chronological Audit History (Req 9)</h3>
+      <ul class="clean-audit-list">
+        <li>
+          <span class="audit-date">14 Oct 2026, 12:45 IST</span>
+          <span class="audit-text">Hearing minutes logged and provisional sanction recorded by <strong>Dr. R. Sharma</strong>.</span>
+        </li>
+        <li>
+          <span class="audit-date">13 Oct 2026, 10:15 IST</span>
+          <span class="audit-text">Evidence artifacts EV-01, EV-02, and EV-03 attached by <strong>Prof. M. K. Nair</strong>.</span>
+        </li>
+        <li>
+          <span class="audit-date">12 Oct 2026, 16:00 IST</span>
+          <span class="audit-text">Case docket assigned to Investigating Officer <strong>Dr. R. Sharma</strong>.</span>
+        </li>
+        <li>
+          <span class="audit-date">12 Oct 2026, 14:30 IST</span>
+          <span class="audit-text">Incident formally reported into central integrity intake registry.</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>
