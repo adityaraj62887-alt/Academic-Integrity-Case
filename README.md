@@ -1,1 +1,1 @@
-# Academic-Integrity-Case
+# Academic-Integrity-Case.
